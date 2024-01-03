@@ -1,0 +1,10 @@
+{
+  "name": "3d5c4365-f30c-4a6e-8732-e624dce96932",
+  "displayName": "confirmation.no",
+  "parameters": [ {
+    "id": "geo-city",
+    "entityType": "@sys.geo-city"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

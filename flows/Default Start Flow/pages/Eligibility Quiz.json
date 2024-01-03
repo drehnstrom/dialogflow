@@ -1,0 +1,60 @@
+{
+  "name": "9b116612-a893-4442-800c-49366d9efefe",
+  "displayName": "Eligibility Quiz",
+  "form": {
+    "parameters": [ {
+      "displayName": "age",
+      "required": true,
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "How old are you?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "weight",
+      "required": true,
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is your weight?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "generators": [ {
+      "generator": "projects/vertext-ai-dar/locations/global/agents/63954b15-7c5c-46d4-8879-ce8de4f4cfb6/generators/7624c3e7-b842-4206-9215-d3f831b1bb0f",
+      "inputParameters": [ {
+        "key": "age",
+        "value": "$session.params.age"
+      }, {
+        "key": "weight",
+        "value": "$session.params.weight"
+      } ],
+      "outputParameter": "$request.generative.eligibility-outcome"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative.eligibility-outcome." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "d7f0f110-0253-4d3e-84d8-4062530e876e"
+  } ]
+}

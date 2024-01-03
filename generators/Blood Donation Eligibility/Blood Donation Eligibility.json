@@ -1,0 +1,20 @@
+{
+  "name": "7624c3e7-b842-4206-9215-d3f831b1bb0f",
+  "displayName": "Blood Donation Eligibility",
+  "placeholders": [ {
+    "id": "age",
+    "name": "age"
+  }, {
+    "id": "weight",
+    "name": "weight"
+  } ],
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "text-bison"
+  }
+}

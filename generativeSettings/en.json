@@ -1,0 +1,16 @@
+{
+  "fallbackSettings": {
+    "selectedPrompt": "Default"
+  },
+  "languageCode": "en",
+  "knowledgeConnectorSettings": {
+    "business": "Save a Life",
+    "agent": "Donate",
+    "agentIdentity": "chatbot",
+    "businessDescription": "Save a life, a fictitious organizatio",
+    "agentScope": "assist humans with eligibility informatio",
+    "llmModelSettings": {
+      "model": "text-bison"
+    }
+  }
+}
